@@ -1,0 +1,84 @@
+
+  .main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .main-nav ul li {
+    margin-right: 20px;
+  }
+  
+  .main-nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 850px) {
+    
+    
+    
+    .navigation {
+      flex-direction: row-reverse;
+      align-items: flex-start;
+    }
+  
+    .menu-icon {
+      display: block; /* Display the menu icon on smaller screens */
+      margin-right: 20px;
+      font-size: 24px;
+      color: white;
+    }
+  
+    .main-nav {
+      display: contents; /* Hide the navigation links by default on smaller screens */
+      width: 100%;
+    }
+  
+    .main-nav.active {
+      display: block; /* Show the navigation links when active */
+    }
+  
+    .main-nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .main-nav ul li {
+      margin-bottom: 10px;
+    }
+  }
+
+/* Image folding and automatic change */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+    transition: transform 0.3s; /* Add transition for smooth folding effect */
+  }
+  
+  .column img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .column:hover {
+    transform: scale(0.95); /* Add the folding effect on hover */
+  }
+  
+  /* Adjust image sizes for smaller screens */
+  @media (max-width: 768px) {
+    .column {
+      flex: 100%;
+      padding: 0;
+    }
+  }
+    
